@@ -17,11 +17,11 @@ public class SportDAO implements DAOInterface<Sports> {
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            session.persist(sport);  // Guardar el deporte usando persist
+            session.persist(sport); 
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
-                transaction.rollback();  // Deshacer la transacción si algo falla
+                transaction.rollback();
             }
             System.err.println("Error al agregar deporte: " + e.getMessage());
         }
