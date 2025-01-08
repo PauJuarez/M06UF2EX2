@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--  As we are connecting mysql, those driver classes, 
+              database name, username and password are specified
+              Please change the information as per your requirement -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>        
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">123qwe</property>
+       
+        <property name="hibernate.default_schema">public</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+   		<property name="hbm2ddl.auto">update </property> <!-- create / create-drop / update -->
+		
+		<property name="show_sql">true</property> <!-- Show SQL in console -->
+		<property name="format_sql">false</property> <!-- Show SQL formatted -->
+		
+		<mapping class="pau.m06.dam.IES.HivernatePauEx2.Sports"/>
+		<mapping class="pau.m06.dam.IES.HivernatePauEx2.Athletes"/>
+    </session-factory>
+</hibernate-configuration>
