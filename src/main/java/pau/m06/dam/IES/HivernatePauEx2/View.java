@@ -24,20 +24,20 @@ public class View {
                 }
             } catch (java.util.InputMismatchException e) {
                 System.out.println("Entrada no válida. Por favor ingrese un número.");
-                scanner.nextLine();  // Limpiar buffer
+                scanner.nextLine();
             }
         }
         return option;
     }
 
     public static String sportForm() {
-        scanner.nextLine();  // Limpiar buffer de entrada
+        scanner.nextLine();
         System.out.print("Ingrese el nombre del deporte: ");
         return scanner.nextLine();
     }
 
     public static Athletes athleteForm() {
-        scanner.nextLine();  // Limpiar buffer de entrada
+        scanner.nextLine(); 
         System.out.print("Ingrese el nombre del atleta: ");
         String name = scanner.nextLine();
 
@@ -47,11 +47,11 @@ public class View {
             sportCod = scanner.nextInt();
         } catch (java.util.InputMismatchException e) {
             System.out.println("Código de deporte inválido. Por favor ingrese un número.");
-            scanner.nextLine();  // Limpiar buffer
+            scanner.nextLine();
         }
 
         if (sportCod == null) {
-            return null;  // Si el código no es válido, no se crea el atleta
+            return null;
         }
 
         Sports sport = new Sports();
@@ -61,7 +61,7 @@ public class View {
     }
 
     public static String askAthlete() {
-        scanner.nextLine();  // Limpiar buffer de entrada
+        scanner.nextLine();
         System.out.print("Ingrese el nombre del atleta (parcial): ");
         return scanner.nextLine();
     }
@@ -75,7 +75,7 @@ public class View {
             sportId = scanner.nextInt();
         } catch (java.util.InputMismatchException e) {
             System.out.println("ID de deporte inválido. Por favor ingrese un número.");
-            scanner.nextLine();  // Limpiar buffer
+            scanner.nextLine();
         }
         return sportId;
     }

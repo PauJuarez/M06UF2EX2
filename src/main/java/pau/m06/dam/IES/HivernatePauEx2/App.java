@@ -43,7 +43,7 @@ public class App {
             View.showMessage("Deporte agregado con éxito.");
         } catch (Exception e) {
             if (transaction != null) {
-                transaction.rollback();  // Deshacer la transacción si algo falla
+                transaction.rollback(); 
             }
             View.showMessage("Error al agregar deporte: " + e.getMessage());
         }
@@ -64,7 +64,7 @@ public class App {
             View.showMessage("Atleta agregado con éxito.");
         } catch (Exception e) {
             if (transaction != null) {
-                transaction.rollback();  // Deshacer la transacción si algo falla
+                transaction.rollback();
             }
             View.showMessage("Error al agregar atleta: " + e.getMessage());
         }

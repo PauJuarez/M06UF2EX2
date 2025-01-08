@@ -2,7 +2,7 @@ package pau.m06.dam.IES.HivernatePauEx2;
 
 import jakarta.persistence.*;
 
-@Entity(name = "Athletes")  // Cambié el nombre de la entidad a 'Athletes'
+@Entity(name = "Athletes")
 @Table(name = "atletas")
 public class Athletes implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
